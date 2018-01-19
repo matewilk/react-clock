@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+
+import Clock from './Clock';
 
 const App = () =>
   <div>
-    <h1>Hello from App</h1>
+    <Clock/>
   </div>;
 
 export default App;

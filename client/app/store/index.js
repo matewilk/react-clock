@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux'
 
-import reducer from './reducers';
+import { clock } from './reducers';
 
 export const reducers = combineReducers({
-  reducer,
+  clock,
   router: routerReducer
 });

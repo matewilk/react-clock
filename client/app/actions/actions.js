@@ -1,10 +1,18 @@
-export const ACTION_ONE = 'ACTION_ONE';
-export const ACTION_TWO = 'ACTION_TWO';
+import C from '../constants';
 
-export function actionOne () {
-  return { type: ACTION_ONE }
-}
+export const startClock  = () =>
+  ({
+    type: C.START_CLOCK,
+    running: true
+  });
 
-export function actionTwo () {
-  return { type: ACTION_TWO }
-}
+export const stopClock = () =>
+  ({
+    type: C.STOP_CLOCK,
+    running: false
+  });
+
+export const tickClock = () =>
+  ({
+    type: C.TICK_CLOCK
+  })

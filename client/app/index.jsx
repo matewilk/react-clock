@@ -10,10 +10,22 @@ import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux'
 
 import App from './components/App';
-import { reducers } from './reducers/index';
+import { reducers } from './store/index';
 
 // initial state
-const initialState = { };
+const initialState = {
+  clock: {
+    running: false,
+    interval: 1000,
+    time: {
+      hours: '00',
+      minutes: '00',
+      seconds: '00',
+      ampm: 'AM'
+    },
+    intervalHandler: undefined
+  }
+};
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory();
